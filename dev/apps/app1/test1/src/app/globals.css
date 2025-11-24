@@ -1,0 +1,34 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@layer base {
+  h1 { @apply text-2xl; }
+}
+
+@layer components {
+  h2 { @apply text-4xl; }
+}
+
+@layer utilities {
+  p { @apply text-6xl; }
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717
+}
+
+@media (prefers-color-schema: dark) {
+  :root {
+    --background: #111827
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
